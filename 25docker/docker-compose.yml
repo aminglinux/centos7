@@ -1,0 +1,23 @@
+version: "2"
+services:
+  app1:
+    image: centos_nginx
+    ports:
+      - "8080:80"
+    networks:
+      - "net1"
+    volumes:
+      - /data/:/data
+  app2:
+    image: centos_with_nettool
+    networks:
+      - "net2"
+    volumes:
+      - /data/:/data1
+    entrypoint: tail -f /etc/passwd
+networks:
+  net1:
+    driver: bridge
+  net2:
+    driver: bridge
+

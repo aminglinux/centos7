@@ -1,0 +1,5 @@
+命令：
+[root@localhost ~]# mkdir /root/.ssh
+[root@localhost ~]# chmod 700 /root/.ssh
+[root@localhost ~]# vi /root/.ssh/authorized_keys
+[root@localhost ~]# setenforce 0
